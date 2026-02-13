@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://24101sbq5e5m"]
+
+[ext_resource type="Texture2D" uid="uid://cplkuogfg52db" path="res://Domestic_Cat.png" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://b37lov4kjxi6o" path="res://tree.tscn" id="2_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://y2dy3bkmuj8u" path="res://icon.svg" id="2_h2yge"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_h2yge"]
+
+[node name="Node2D" type="Node2D" unique_id=720019776]
+material = SubResource("CanvasItemMaterial_h2yge")
+
+[node name="DomesticCat" type="Sprite2D" parent="." unique_id=15664885]
+position = Vector2(493, 370)
+scale = Vector2(2, 2)
+texture = ExtResource("1_0xm2m")
+
+[node name="DomesticCat2" type="Sprite2D" parent="DomesticCat" unique_id=900917543]
+position = Vector2(-175.5, -925)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_0xm2m")
+
+[node name="Robot" type="Sprite2D" parent="DomesticCat" unique_id=1620253590]
+modulate = Color(1, 0.39215687, 1, 1)
+position = Vector2(-1148, -284)
+scale = Vector2(0.84375, 0.84375)
+texture = ExtResource("2_h2yge")
+
+[node name="Robot2" type="Sprite2D" parent="DomesticCat/Robot" unique_id=1957402575]
+modulate = Color(1, 0.39215687, 1, 1)
+position = Vector2(-228.74075, -184.88887)
+texture = ExtResource("2_h2yge")
+
+[node name="tree 1" parent="DomesticCat" unique_id=771066330 instance=ExtResource("2_1bvp3")]
+offset_left = 782.5
+offset_top = -1224.5
+offset_right = 822.5
+offset_bottom = -1184.5
+metadata/_edit_use_anchors_ = true
+
+[node name="tree 2" parent="DomesticCat" unique_id=49032804 instance=ExtResource("2_1bvp3")]
+offset_left = 1823.5
+offset_top = 135.0
+offset_right = 1863.5
+offset_bottom = 175.0
+metadata/_edit_use_anchors_ = true

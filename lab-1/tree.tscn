@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b37lov4kjxi6o"]
+
+[node name="Tree" type="Control" unique_id=49032804]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 40.0
+offset_right = 40.0
+offset_bottom = 1804.0
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=924163010]
+layout_mode = 0
+offset_left = -135.0
+offset_top = -25.0
+offset_right = 77.0
+offset_bottom = 299.0
+color = Color(0.35686275, 0.12941177, 0.08627451, 1)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1754015033]
+layout_mode = 0
+offset_left = -438.0
+offset_top = -438.0
+offset_right = 335.15387
+offset_bottom = -1.0
+color = Color(0.9433808, 0.79270875, 0.7574294, 1)

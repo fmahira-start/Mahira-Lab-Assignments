@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://b4iofk4pm4i2i"]
+
+[ext_resource type="Texture2D" uid="uid://cplkuogfg52db" path="res://Domestic_Cat.png" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://y2dy3bkmuj8u" path="res://icon.svg" id="2_epypp"]
+
+[node name="Node2D" type="Node2D" unique_id=720019776]
+position = Vector2(80, -54)
+
+[node name="DomesticCat" type="Sprite2D" parent="." unique_id=15664885]
+position = Vector2(397, 307)
+texture = ExtResource("1_0e48y")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="DomesticCat" unique_id=978046174]
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1620253590]
+modulate = Color(1, 0.39215687, 1, 1)
+position = Vector2(-232, 163)
+texture = ExtResource("2_epypp")
