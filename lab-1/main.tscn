@@ -16,18 +16,18 @@ texture = ExtResource("1_0xm2m")
 
 [node name="DomesticCat2" type="Sprite2D" parent="DomesticCat" unique_id=900917543]
 position = Vector2(-175.5, -925)
-scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_0xm2m")
 
 [node name="Robot" type="Sprite2D" parent="DomesticCat" unique_id=1620253590]
 modulate = Color(1, 0.39215687, 1, 1)
 position = Vector2(-1148, -284)
-scale = Vector2(0.84375, 0.84375)
+scale = Vector2(2, 2)
 texture = ExtResource("2_h2yge")
 
 [node name="Robot2" type="Sprite2D" parent="DomesticCat/Robot" unique_id=1957402575]
 modulate = Color(1, 0.39215687, 1, 1)
 position = Vector2(-228.74075, -184.88887)
+scale = Vector2(2, 2)
 texture = ExtResource("2_h2yge")
 
 [node name="tree 1" parent="DomesticCat" unique_id=771066330 instance=ExtResource("2_1bvp3")]
@@ -37,9 +37,23 @@ offset_right = 822.5
 offset_bottom = -1184.5
 metadata/_edit_use_anchors_ = true
 
-[node name="tree 2" parent="DomesticCat" unique_id=49032804 instance=ExtResource("2_1bvp3")]
-offset_left = 1823.5
-offset_top = 135.0
-offset_right = 1863.5
-offset_bottom = 175.0
+[node name="tree 3" parent="DomesticCat" unique_id=49032804 instance=ExtResource("2_1bvp3")]
+offset_left = 2911.5
+offset_top = -1308.5
+offset_right = 2951.5
+offset_bottom = -1268.5
+metadata/_edit_use_anchors_ = true
+
+[node name="tree 4" parent="DomesticCat" unique_id=826842543 instance=ExtResource("2_1bvp3")]
+offset_left = 3885.0
+offset_top = -208.0
+offset_right = 3925.0
+offset_bottom = -168.0
+metadata/_edit_use_anchors_ = true
+
+[node name="tree 2" parent="DomesticCat" unique_id=394653585 instance=ExtResource("2_1bvp3")]
+offset_left = 1724.0
+offset_top = -249.5
+offset_right = 1764.0
+offset_bottom = -209.5
 metadata/_edit_use_anchors_ = true
