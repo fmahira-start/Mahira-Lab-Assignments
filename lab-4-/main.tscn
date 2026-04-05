@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://c70l3dcopch2s"]
+
+[ext_resource type="Script" uid="uid://dvuce6pdadlfg" path="res://character_body_3d.gd" id="1_ig7tw"]
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_7dm0k"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ig7tw"]
+panorama = SubResource("PortableCompressedTexture2D_7dm0k")
+
+[sub_resource type="Sky" id="Sky_0xm2m"]
+sky_material = SubResource("PanoramaSkyMaterial_ig7tw")
+
+[sub_resource type="Environment" id="Environment_h2yge"]
+background_mode = 2
+sky = SubResource("Sky_0xm2m")
+
+[sub_resource type="BoxMesh" id="BoxMesh_0xm2m"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1bvp3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lquwl"]
+albedo_color = Color(0.89357185, 0.82720625, 0.7186063, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7mycd"]
+size = Vector3(30, 1, 30)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ig7tw"]
+albedo_color = Color(0.19215687, 1, 1, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_7dm0k"]
+material = SubResource("StandardMaterial3D_ig7tw")
+radius = 1.0
+height = 4.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7dm0k"]
+radius = 1.0
+height = 3.0
+
+[node name="Node3D" type="Node3D" unique_id=1844250962]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=834678444]
+environment = SubResource("Environment_h2yge")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1409646485]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.665726, 0)
+mesh = SubResource("BoxMesh_0xm2m")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1155867508]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.559568, 5.910052, 2.1335049)
+use_collision = true
+size = Vector3(15, 1, 15)
+material = SubResource("StandardMaterial3D_1bvp3")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=1363056062]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.709406, 6.9191704, 2.1335049)
+use_collision = true
+size = Vector3(15, 1, 15)
+material = SubResource("StandardMaterial3D_lquwl")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1747868274]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0010919571, 5.0404644, 0)
+mesh = SubResource("BoxMesh_7mycd")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=344625081]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6693611, 13.282742, 0)
+script = ExtResource("1_ig7tw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D" unique_id=253686588]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2681389, 1.1723766, 8.867771)
+mesh = SubResource("CapsuleMesh_7dm0k")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/MeshInstance3D" unique_id=793205237]
+transform = Transform3D(0.89563584, -0.045485027, -0.4424563, 0.17103413, 0.9534922, 0.24819325, 0.41058958, -0.29796588, 0.86176133, -1.326129, -0.6861162, 7.2074375)
+fov = 114.34113
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1116351010]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3307376, 1.2013664, 9.470468)
+shape = SubResource("CapsuleShape3D_7dm0k")
